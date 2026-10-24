@@ -1,0 +1,138 @@
+
+/* 1. Default spacing remove karna */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Puri website ki styling */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #e9d5ff);
+}
+
+/* 3. Calculator main box */
+.calculator {
+    width: 350px;
+    max-width: 95%;
+    padding: 25px;
+    background: white;
+    border-radius: 22px;
+    box-shadow: 0 15px 40px rgba(40, 40, 90, 0.18);
+}
+
+/* 4. Heading */
+h1 {
+    text-align: center;
+    color: #252b48;
+    font-size: 25px;
+    margin-bottom: 22px;
+}
+
+/* 5. Calculator display */
+#display {
+    width: 100%;
+    height: 75px;
+    padding: 15px;
+    margin-bottom: 20px;
+
+    border: 2px solid #e5e7eb;
+    border-radius: 14px;
+
+    background: #f8fafc;
+    color: #1e293b;
+
+    font-size: 30px;
+    text-align: right;
+    outline: none;
+}
+
+/* 6. Buttons ka layout */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* 7. Sabhi buttons */
+button {
+    min-height: 58px;
+    border: none;
+    border-radius: 13px;
+
+    background: #f1f5f9;
+    color: #1e293b;
+
+    font-size: 21px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+/* 8. Mouse button par le jaane par */
+button:hover {
+    background: #e2e8f0;
+    transform: translateY(-2px);
+}
+
+/* 9. Button click effect */
+button:active {
+    transform: scale(0.95);
+}
+
+/* 10. Operators: + - * / */
+.operatorBtn {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.operatorBtn:hover {
+    background: #bfdbfe;
+}
+
+/* 11. Clear button */
+.clear {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.clear:hover {
+    background: #fecaca;
+}
+
+/* 12. Equal button */
+.equal {
+    grid-row: span 2;
+    background: #4f46e5;
+    color: white;
+}
+
+.equal:hover {
+    background: #4338ca;
+}
+
+/* 13. Zero button ko double width dena */
+.zero {
+    grid-column: span 2;
+}
+
+/* 14. Mobile screen adjustment */
+@media (max-width: 400px) {
+    .calculator {
+        padding: 18px;
+    }
+
+    .buttons {
+        gap: 9px;
+    }
+
+    button {
+        min-height: 52px;
+    }
+}
